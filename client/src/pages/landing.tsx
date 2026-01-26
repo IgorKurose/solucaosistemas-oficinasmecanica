@@ -4,6 +4,7 @@ import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wr
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
 import blob1 from "@/assets/images/blob-1.png";
+import heroMechanic from "@assets/Gemini_Generated_Image_gdgm8egdgm8egdgm_1769460231983.jpg";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -156,14 +157,14 @@ function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/0 to-red-50/60 opacity-70" />
                 <img
                   data-testid="img-hero-dashboard"
-                  src={heroDashboard}
-                  alt="Dashboard do ERP"
-                  className="btn-transition h-auto w-full origin-center rounded-2xl object-cover mockup-tilt"
+                  src={heroMechanic}
+                  alt="Mecânico usando o sistema"
+                  className="btn-transition h-auto w-full origin-center rounded-2xl object-cover"
                 />
                 <div className="pointer-events-none absolute inset-0 ring-1 ring-black/5" />
               </div>
               <div data-testid="text-hero-caption" className="mt-4 text-center text-sm text-muted-foreground">
-                Visualização do sistema (exemplo)
+                Controle total na palma da sua mão
               </div>
             </FadeIn>
           </div>
@@ -359,7 +360,7 @@ function Demo() {
   }, [tabs.length]);
 
   return (
-    <section id="demo" className="bg-white py-14 sm:py-16 lg:py-24 text-[#fefefe]">
+    <section id="demo" className="bg-white py-14 sm:py-16 lg:py-24">
       <Container>
         <SectionHeader title="Veja como é simples usar" />
 
