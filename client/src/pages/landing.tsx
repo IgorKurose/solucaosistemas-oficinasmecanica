@@ -359,7 +359,7 @@ function Demo() {
   }, [tabs.length]);
 
   return (
-    <section id="demo" className="bg-white py-14 sm:py-16 lg:py-24">
+    <section id="demo" className="bg-white py-14 sm:py-16 lg:py-24 text-[#fefefe]">
       <Container>
         <SectionHeader title="Veja como é simples usar" />
 
