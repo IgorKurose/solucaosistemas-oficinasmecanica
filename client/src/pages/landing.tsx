@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wrench, BarChart3, Users, FileText } from "lucide-react";
+import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wrench, BarChart3, Users, FileText, Star } from "lucide-react";
 
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
@@ -130,11 +130,39 @@ function Hero() {
 
               <div
                 data-testid="text-hero-trust"
-                className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-muted-foreground"
+                className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center"
               >
-                <span>✓ Sem contrato de fidelidade</span>
-                <span>✓ Suporte brasileiro</span>
-                <span>✓ Implantação orientada</span>
+                <div className="flex items-center gap-4 border-r border-border pr-4 last:border-0 last:pr-0">
+                  <div className="flex flex-col">
+                    <div className="flex items-center gap-1">
+                      <span className="text-sm font-bold text-foreground">4,8</span>
+                      <div className="flex items-center">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                    </div>
+                    <span className="text-[10px] text-muted-foreground uppercase tracking-wider font-semibold">
+                      306 avaliações no Google
+                    </span>
+                  </div>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <div className="flex -space-x-2">
+                    {[1, 2, 3].map((i) => (
+                      <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-red-100 flex items-center justify-center text-[10px] font-bold text-red-600">
+                        {String.fromCharCode(64 + i)}
+                      </div>
+                    ))}
+                    <div className="h-8 w-8 rounded-full border-2 border-white bg-gray-900 flex items-center justify-center text-[10px] font-bold text-white">
+                      +3k
+                    </div>
+                  </div>
+                  <span className="text-sm font-medium text-foreground">
+                    Mais de <span className="text-primary font-bold">3.000 clientes</span> ativos
+                  </span>
+                </div>
               </div>
             </FadeIn>
           </div>
