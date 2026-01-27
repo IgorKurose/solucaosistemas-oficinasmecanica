@@ -128,13 +128,6 @@ function Hero() {
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
                 <WhatsAppButton variant="primary" label="Falar com Especialista" testId="button-hero-whatsapp" />
-                <a
-                  data-testid="button-hero-demo"
-                  href="#demo"
-                  className="btn-secondary btn-transition inline-flex items-center justify-center rounded-lg px-8 py-4 text-base font-semibold"
-                >
-                  Ver demonstração
-                </a>
               </div>
 
               <div
