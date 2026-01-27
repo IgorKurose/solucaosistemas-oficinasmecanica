@@ -4,6 +4,7 @@ import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wr
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
 import heroMechanic from "@assets/Gemini_Generated_Image_gdgm8egdgm8egdgm_1769460231983.jpg";
+import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -150,7 +151,10 @@ function Hero() {
                 
                 <div className="flex items-center gap-4">
                   <div className="flex -space-x-2">
-                    {[1, 2, 3].map((i) => (
+                    <div className="h-8 w-8 rounded-full border-2 border-white bg-white overflow-hidden flex items-center justify-center">
+                      <img src={logoCandido} alt="Logo" className="h-full w-full object-cover" />
+                    </div>
+                    {[1, 2].map((i) => (
                       <div key={i} className="h-8 w-8 rounded-full border-2 border-white bg-red-100 flex items-center justify-center text-[10px] font-bold text-red-600">
                         {String.fromCharCode(64 + i)}
                       </div>
@@ -254,7 +258,7 @@ function VideoTestimonial() {
       <Container>
         <SectionHeader 
           overline="RESULTADOS REAIS" 
-          title="Veja quem já transformou sua oficina" 
+          title="Veja quem já transformaram sua oficina" 
           subtitle="Assista ao depoimento de quem usa o sistema no dia a dia e veja como ele pode ajudar o seu negócio."
         />
         
