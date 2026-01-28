@@ -266,7 +266,7 @@ function Hero() {
                   data-testid="img-hero-dashboard"
                   src={heroMainImage}
                   alt="Mecânico usando o sistema"
-                  className="h-auto w-full origin-center object-contain scale-[1.3]"
+                  className="h-auto w-full origin-center object-contain scale-[1.1] sm:scale-[1.3] mt-8 sm:mt-0"
                 />
               </div>
             </FadeIn>
