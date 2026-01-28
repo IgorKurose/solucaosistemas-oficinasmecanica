@@ -121,7 +121,7 @@ function Hero() {
 
               <h1
                 data-testid="text-hero-title"
-                className="mt-8 font-extrabold tracking-tight text-[#0F172A] sm:text-6xl lg:text-8xl lg:leading-[1.1] text-[77px]"
+                className="mt-8 font-extrabold tracking-tight text-[#0F172A] sm:text-6xl lg:text-8xl lg:leading-[1.1] text-[71px]"
               >
                 Gerencie sua oficina em um só lugar
               </h1>
