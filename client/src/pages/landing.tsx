@@ -321,15 +321,18 @@ function PainPoints() {
             </div>
           </div>
 
-          {/* Coluna da Direita: Rola normalmente */}
-          <div className="w-full lg:w-1/2 space-y-12 lg:space-y-20 lg:pt-8">
+          {/* Coluna da Direita: Rola com sobreposição */}
+          <div className="w-full lg:w-1/2 space-y-24 lg:space-y-32 pb-32">
             {items.map((it, idx) => {
               const Icon = it.icon;
               return (
                 <div
                   key={it.title}
                   data-testid={`card-pain-${idx}`}
-                  className="group relative overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-lg transition-all duration-500 hover:shadow-2xl"
+                  className="sticky top-48 group relative overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-xl transition-all duration-500 hover:shadow-2xl"
+                  style={{ 
+                    zIndex: idx + 1 
+                  }}
                 >
                   <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-red-50 text-red-600 shadow-inner">
                     <Icon className="h-8 w-8" strokeWidth={2.5} />
