@@ -128,7 +128,7 @@ function Hero() {
 
               <p
                 data-testid="text-hero-subtitle"
-                className="mt-8 max-w-4xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-2xl"
+                className="mt-8 max-w-4xl text-slate-600 sm:text-xl lg:text-2xl text-[19px]"
               >
                 ERP completo para oficinas mecânicas e borracharias: controle ordens de serviço, estoque, vendas e financeiro de forma simples e profissional.
               </p>
