@@ -451,7 +451,7 @@ function Features() {
         icon: Wrench,
         title: "Ordens de Serviço Digitais",
         description: "Crie e acompanhe serviços com status, responsáveis e histórico. Tudo padronizado, sem papel.",
-        bullets: ["Status por etapa (aberta, em execução, finalizada)", "Histórico por cliente e veículo", "Impressão e compartilhamento fáceis"],
+        bullets: ["Histórico por cliente e veículo", "Impressão e compartilhamento fáceis"],
         image: heroDashboard,
       },
       {
