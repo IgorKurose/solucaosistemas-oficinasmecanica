@@ -366,7 +366,7 @@ function VideoTestimonial() {
       <Container>
         <SectionHeader 
           overline="RESULTADOS REAIS" 
-          title="Veja quem já transformou sua oficina" 
+          title="Veja quem já transformou sua empresa" 
           subtitle="Assista ao depoimento de quem usa o sistema no dia a dia e veja como ele pode ajudar o seu negócio."
         />
         
