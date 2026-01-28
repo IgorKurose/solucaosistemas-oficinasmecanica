@@ -128,7 +128,9 @@ function Nav() {
       <Container>
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <img src={logoCompany} alt="Solução Sistemas" className="h-10 w-auto object-contain" />
+            <a href="http://www.sucessonaempresa.com" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+              <img src={logoCompany} alt="Solução Sistemas" className="h-10 w-auto object-contain" />
+            </a>
           </div>
 
           <div className="hidden items-center gap-8 md:flex">
