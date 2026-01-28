@@ -479,7 +479,6 @@ function Benefits() {
       { num: "3x", label: "Mais produtividade" },
       { num: "-50%", label: "Menos retrabalho" },
       { num: "90%", label: "Mais visibilidade" },
-      { num: "24h", label: "Implantação guiada" },
     ],
     [],
   );
@@ -494,12 +493,12 @@ function Benefits() {
           </h2>
         </div>
 
-        <div className="relative mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-8">
+        <div className="relative mt-12 flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
           {stats.map((s, idx) => (
             <div
               key={s.label}
               data-testid={`card-stat-${idx}`}
-              className="glass rounded-xl p-5 text-center text-white shadow-none"
+              className="glass min-w-[160px] flex-1 rounded-xl p-5 text-center text-white shadow-none sm:min-w-[200px] lg:max-w-[280px]"
               style={{ backgroundColor: "rgba(255,255,255,0.10)", borderColor: "rgba(255,255,255,0.18)" }}
             >
               <div data-testid={`text-stat-num-${idx}`} className="text-display text-4xl font-bold sm:text-5xl lg:text-6xl">
