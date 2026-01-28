@@ -3,7 +3,7 @@ import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wr
 
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
-import heroMainImage from "@assets/Design_sem_nome_(8)_1769567133152.png";
+import heroMainImage from "@/assets/images/hero-clean.png";
 import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 import logoRz from "@assets/R_1769551366605.png";
 
