@@ -303,39 +303,44 @@ function PainPoints() {
     <section id="dores" className="bg-white py-24 sm:py-32 overflow-hidden">
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <div className="sticky top-32">
+          <div className="lg:sticky lg:top-32 pb-12 lg:pb-0">
             <SectionHeader 
               overline="VOCÊ SE IDENTIFICA?" 
               title="Cansado de perder vendas por falta de controle?" 
             />
-            <p className="mt-6 text-lg text-muted-foreground">
+            <p className="mt-6 text-lg text-muted-foreground max-w-lg">
               Muitas oficinas ainda operam de forma arcaica, perdendo tempo e dinheiro em processos manuais que poderiam ser automatizados.
             </p>
           </div>
 
-          <div className="space-y-8 lg:pt-12">
+          <div className="relative space-y-24 lg:space-y-32">
             {items.map((it, idx) => {
               const Icon = it.icon;
               return (
                 <div
                   key={it.title}
                   data-testid={`card-pain-${idx}`}
-                  className="sticky top-40 group relative overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-lg transition-all duration-300 hover:shadow-xl"
+                  className="sticky top-48 group relative overflow-hidden rounded-2xl border border-border bg-white p-8 shadow-xl transition-all duration-500 hover:shadow-2xl"
                   style={{ 
-                    marginTop: idx === 0 ? 0 : `${idx * 2}rem`,
                     zIndex: idx + 1 
                   }}
                 >
-                  <div className="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-red-100 text-red-600">
-                    <Icon className="h-7 w-7" strokeWidth={2.25} />
+                  <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-red-50 text-red-600 shadow-inner">
+                    <Icon className="h-8 w-8" strokeWidth={2.5} />
                   </div>
-                  <div data-testid={`text-pain-title-${idx}`} className="text-xl font-bold text-foreground">
+                  <h3 data-testid={`text-pain-title-${idx}`} className="text-2xl font-bold text-slate-900">
                     {it.title}
-                  </div>
-                  <p data-testid={`text-pain-desc-${idx}`} className="mt-3 text-base leading-relaxed text-muted-foreground">
+                  </h3>
+                  <p data-testid={`text-pain-desc-${idx}`} className="mt-4 text-lg leading-relaxed text-slate-600">
                     {it.desc}
                   </p>
-                  <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-red-200/10 blur-3xl" />
+                  
+                  {/* Decorative number */}
+                  <div className="absolute top-8 right-8 text-6xl font-black text-slate-50 select-none -z-10 group-hover:text-red-50 transition-colors">
+                    0{idx + 1}
+                  </div>
+                  
+                  <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-red-500/5 blur-3xl group-hover:bg-red-500/10 transition-colors" />
                 </div>
               );
             })}
