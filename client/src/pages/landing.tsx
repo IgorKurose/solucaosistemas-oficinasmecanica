@@ -3,7 +3,7 @@ import { CheckCircle, ClipboardX, AlertTriangle, TrendingDown, MessageCircle, Wr
 
 import heroDashboard from "@/assets/images/hero-dashboard.png";
 import previewGrid from "@/assets/images/preview-grid.png";
-import heroMainImage from "@/assets/images/hero-clean.png";
+import heroMainImage from "@assets/Notas_Fiscais_(2)_1769567743794.png";
 import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 import logoRz from "@assets/R_1769551366605.png";
 
@@ -98,8 +98,7 @@ function FadeIn({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-[hsl(220_14%_96%/0.55)] to-[hsl(354_78%_54%/0.10)]">
-      <div className="pointer-events-none absolute inset-0 mesh-bg" />
+    <section className="relative overflow-hidden bg-[#ffffff]">
       <Container>
         <div className="relative grid items-center gap-10 py-14 sm:py-16 lg:grid-cols-12 lg:gap-12 lg:py-24">
           <div className="lg:col-span-5">
@@ -205,7 +204,7 @@ function Hero() {
                   data-testid="img-hero-dashboard"
                   src={heroMainImage}
                   alt="Mecânico usando o sistema"
-                  className="btn-transition h-auto w-full origin-center object-contain drop-shadow-2xl scale-110"
+                  className="h-auto w-full origin-center object-contain scale-110"
                 />
               </div>
               <div data-testid="text-hero-caption" className="mt-8 text-center text-sm text-muted-foreground">
