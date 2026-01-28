@@ -681,22 +681,92 @@ function Testimonials() {
 }
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer className="bg-gray-900 py-12 text-white">
+    <footer className="relative border-t border-white/5 bg-[#0F172A] pt-16 pb-8 text-white overflow-hidden">
+      {/* Background Decor */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-red-500/50 to-transparent" />
+      <div className="absolute -top-24 -left-24 w-64 h-64 bg-red-600/10 rounded-full blur-[100px]" />
+      <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-blue-600/10 rounded-full blur-[100px]" />
+
       <Container>
-        <div className="grid gap-8 md:grid-cols-12 md:items-center">
-          <div className="md:col-span-7">
-            <img src={logoCompany} alt="Solução Sistemas" className="h-10 w-auto object-contain brightness-0 invert" />
-            <div data-testid="text-footer-title" className="mt-4 text-display text-2xl font-semibold">
-              ERP para Oficinas e Borracharias
+        <div className="grid gap-12 lg:grid-cols-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-5">
+            <div className="flex items-center gap-3">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white p-2 shadow-xl">
+                <img src={logoCompany} alt="Solução Sistemas" className="h-full w-full object-contain" />
+              </div>
+              <div>
+                <div className="text-xl font-bold tracking-tight text-white">
+                  Solução <span className="text-red-500">Sistemas</span>
+                </div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-white/40 font-bold">
+                  Tecnologia Automotiva
+                </div>
+              </div>
+            </div>
+            
+            <p className="mt-6 max-w-sm text-base leading-relaxed text-white/60">
+              Transformando a gestão de oficinas e borracharias com tecnologia simples, robusta e focada em resultados reais.
+            </p>
+
+            <div className="mt-8 flex items-center gap-4">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 hover:bg-white/10 transition-colors cursor-pointer border border-white/10">
+                <Star className="h-5 w-5 text-yellow-500 fill-yellow-500" />
+              </div>
+              <div className="text-sm">
+                <div className="font-bold text-white">4.8/5 no Google</div>
+                <div className="text-white/40 text-xs">Baseado em +300 avaliações</div>
+              </div>
             </div>
           </div>
-          <div className="md:col-span-5 md:flex md:justify-end">
-            <WhatsAppButton variant="primary" label="Falar no WhatsApp" testId="button-footer-whatsapp" />
+
+          {/* Quick Links */}
+          <div className="lg:col-span-3">
+            <h4 className="text-sm font-bold uppercase tracking-wider text-white">Navegação</h4>
+            <ul className="mt-6 space-y-4">
+              {["Dores", "Recursos", "Suporte", "Resultados"].map((item) => (
+                <li key={item}>
+                  <a 
+                    href={`#${item.toLowerCase()}`} 
+                    className="text-white/60 hover:text-red-500 transition-colors duration-200 text-sm flex items-center gap-2 group"
+                  >
+                    <span className="h-px w-0 bg-red-500 transition-all duration-300 group-hover:w-3" />
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Column */}
+          <div className="lg:col-span-4">
+            <div className="rounded-2xl bg-white/5 p-6 border border-white/10 backdrop-blur-sm">
+              <h4 className="text-sm font-bold uppercase tracking-wider text-white">Pronto para começar?</h4>
+              <p className="mt-2 text-sm text-white/60">Agende uma demonstração gratuita agora mesmo.</p>
+              <div className="mt-6">
+                <WhatsAppButton variant="primary" label="Chamar no WhatsApp" testId="button-footer-whatsapp-pro" />
+              </div>
+              <div className="mt-4 flex items-center gap-2 text-[11px] text-white/40 justify-center">
+                <div className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                Atendimento online agora
+              </div>
+            </div>
           </div>
         </div>
-        <div data-testid="text-footer-legal" className="mt-10 border-t border-white/10 pt-6 text-xs text-white/60">
-          © {new Date().getFullYear()} — Demonstração de layout.
+
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="text-xs text-white/40 font-medium">
+            © {currentYear} Solução Sistemas. Todos os direitos reservados.
+          </div>
+          <div className="flex items-center gap-6 text-[10px] uppercase tracking-widest font-bold text-white/30">
+            <span className="hover:text-white/60 cursor-pointer transition-colors">Termos</span>
+            <span className="hover:text-white/60 cursor-pointer transition-colors">Privacidade</span>
+            <span className="hover:text-white/60 cursor-pointer transition-colors">Cookies</span>
+          </div>
         </div>
       </Container>
     </footer>
