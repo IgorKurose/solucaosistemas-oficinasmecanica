@@ -488,7 +488,11 @@ function Benefits() {
     <section className="relative overflow-hidden bg-gradient-to-br from-red-600 to-red-700 py-14 sm:py-16 lg:py-24 text-white">
       <div className="pointer-events-none absolute inset-0 opacity-60 dot-grid" />
       <Container>
-        <SectionHeader title="Resultados que você vai alcançar" />
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 data-testid="text-section-title" className="text-display mt-2 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+            Resultados que você vai alcançar
+          </h2>
+        </div>
 
         <div className="relative mt-12 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4 lg:gap-8">
           {stats.map((s, idx) => (
