@@ -106,7 +106,7 @@ function Hero() {
           <img src={logoCompany} alt="Solução Sistemas" className="h-12 w-auto object-contain" />
         </div>
         <div className="relative grid items-center gap-12 py-12 sm:py-16 lg:grid-cols-12 lg:gap-20 lg:py-24">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-12 xl:col-span-8">
             <FadeIn>
               <div
                 data-testid="badge-hero"
@@ -121,14 +121,14 @@ function Hero() {
 
               <h1
                 data-testid="text-hero-title"
-                className="text-display mt-8 text-4xl font-extrabold tracking-tight text-[#0F172A] sm:text-5xl lg:text-7xl lg:leading-[1.1]"
+                className="text-display mt-8 text-4xl font-extrabold tracking-tight text-[#0F172A] sm:text-6xl lg:text-8xl lg:leading-[1.1]"
               >
                 Gerencie sua oficina em um só lugar
               </h1>
 
               <p
                 data-testid="text-hero-subtitle"
-                className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-2xl"
+                className="mt-8 max-w-4xl text-lg leading-relaxed text-slate-600 sm:text-xl lg:text-2xl"
               >
                 ERP completo para oficinas mecânicas e borracharias: controle ordens de serviço, estoque, vendas e financeiro de forma simples e profissional.
               </p>
@@ -202,17 +202,17 @@ function Hero() {
             </FadeIn>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-12 xl:col-span-4 lg:mt-12 xl:mt-0">
             <FadeIn delay={100}>
               <div
                 data-testid="img-hero-mockup"
-                className="group relative mx-auto w-full lg:ml-auto lg:mr-0"
+                className="group relative mx-auto w-full max-w-2xl xl:ml-auto xl:mr-0"
               >
                 <img
                   data-testid="img-hero-dashboard"
                   src={heroMainImage}
                   alt="Mecânico usando o sistema"
-                  className="h-auto w-full origin-center object-contain scale-110"
+                  className="h-auto w-full origin-center object-contain scale-125"
                 />
               </div>
             </FadeIn>
