@@ -433,7 +433,7 @@ function Support() {
     {
       id: 2,
       title: "Migração Sem Dor de Cabeça",
-      desc: "Trazemos seus dados do sistema antigo ou planilhas sem custo adicional.",
+      desc: "Trazemos seus dados do sistema antigo.",
     },
     {
       id: 3,
