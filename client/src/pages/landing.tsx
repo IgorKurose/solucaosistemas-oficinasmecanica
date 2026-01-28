@@ -7,6 +7,7 @@ import heroMainImage from "@assets/Notas_Fiscais_(2)_1769567743794.png";
 import logoCandido from "@assets/logo_candido_1769545514098.jpg";
 import logoRz from "@assets/R_1769551366605.png";
 import logoCompany from "@assets/image_1769577733120.png";
+import imgSupport from "@assets/image_1769577895555.png";
 
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
@@ -419,57 +420,79 @@ function Features() {
   );
 }
 
-function Demo() {
-  const [active, setActive] = useState(0);
-
-  const tabs = useMemo(
-    () => [
-      { label: "Dashboard", img: heroDashboard },
-      { label: "OS & Status", img: previewGrid },
-      { label: "Estoque", img: heroDashboard },
-    ],
-    [],
-  );
-
-  useEffect(() => {
-    const id = window.setInterval(() => setActive((a) => (a + 1) % tabs.length), 5500);
-    return () => window.clearInterval(id);
-  }, [tabs.length]);
+function Support() {
+  const points = [
+    {
+      id: 1,
+      title: "Atendimento Especializado",
+      desc: "Não somos robôs. Nossa equipe é formada por consultores reais que entendem de gestão.",
+    },
+    {
+      id: 2,
+      title: "Migração Sem Dor de Cabeça",
+      desc: "Trazemos seus dados do sistema antigo ou planilhas sem custo adicional.",
+    },
+    {
+      id: 3,
+      title: "Treinamento Contínuo",
+      desc: "Acesso ilimitado à nossa universidade corporativa para treinar sua equipe.",
+    },
+  ];
 
   return (
-    <section id="demo" className="bg-white py-14 sm:py-16 lg:py-24">
+    <section className="bg-white py-14 sm:py-16 lg:py-24">
       <Container>
-        <SectionHeader title="Veja como é simples usar" />
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          <div className="relative">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+              <img
+                src={imgSupport}
+                alt="Equipe de Suporte Solução Sistemas"
+                className="h-auto w-full object-cover"
+              />
+              <div className="absolute bottom-6 left-6 right-6">
+                <div className="glass rounded-xl bg-white/90 p-4 shadow-xl backdrop-blur-sm sm:p-6">
+                  <div className="flex items-center gap-4">
+                    <div className="text-3xl font-bold text-[#0F172A] sm:text-4xl">98%</div>
+                    <div>
+                      <div className="text-sm font-bold text-emerald-600 sm:text-base">Satisfaction</div>
+                      <div className="text-[10px] leading-tight text-muted-foreground sm:text-xs">
+                        Dos nossos clientes relatam aumento imediato na produtividade.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        <div className="mx-auto mt-10 max-w-5xl">
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {tabs.map((t, idx) => (
-              <button
-                key={t.label}
-                data-testid={`button-demo-tab-${idx}`}
-                onClick={() => setActive(idx)}
-                className={`btn-transition rounded-full px-4 py-2 text-sm font-semibold ${
-                  idx === active
-                    ? "bg-red-600 text-white shadow-soft"
-                    : "border border-border bg-white text-foreground hover:bg-[hsl(220_14%_96%/0.8)]"
-                }`}
+          <div>
+            <h2 className="text-display text-3xl font-bold leading-tight text-[#0F172A] sm:text-4xl lg:text-5xl">
+              Suporte que entende o seu negócio
+            </h2>
+            <div className="mt-10 space-y-8">
+              {points.map((p) => (
+                <div key={p.id} className="flex gap-5">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#F1F5F9] text-sm font-bold text-[#E63946]">
+                    {p.id}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-bold text-[#0F172A]">{p.title}</h3>
+                    <p className="mt-1 text-muted-foreground">{p.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10">
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-[#0F172A] px-8 py-4 text-sm font-bold text-white transition-all hover:bg-[#1E293B]"
               >
-                {t.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="noise-surface mt-6 overflow-hidden rounded-2xl border border-border bg-white shadow-soft-xl">
-            <img
-              data-testid="img-demo-main"
-              src={tabs[active]?.img}
-              alt="Preview do sistema"
-              className="h-auto w-full object-cover"
-            />
-          </div>
-
-          <div className="mt-10 flex justify-center">
-            <WhatsAppButton variant="primary" label="Quero ver na prática — Falar no WhatsApp" testId="button-demo-whatsapp" />
+                Falar com Especialista
+              </a>
+            </div>
           </div>
         </div>
       </Container>
@@ -628,7 +651,7 @@ export default function Landing() {
       <PainPoints />
       <VideoTestimonial />
       <Features />
-      <Demo />
+      <Support />
       <Benefits />
       <Testimonials />
       <Footer />
