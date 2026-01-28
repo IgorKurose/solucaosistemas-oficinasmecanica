@@ -207,9 +207,6 @@ function Hero() {
                   className="h-auto w-full origin-center object-contain scale-110"
                 />
               </div>
-              <div data-testid="text-hero-caption" className="mt-8 text-center text-sm text-muted-foreground">
-                Controle total na palma da sua mão
-              </div>
             </FadeIn>
           </div>
         </div>
