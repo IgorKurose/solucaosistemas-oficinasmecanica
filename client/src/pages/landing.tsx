@@ -15,6 +15,14 @@ import avatarJoao from "/assets/R_(2)_1769584109331.png";
 const WA_PHONE = "5567998085713";
 const WA_MESSAGE = "Olá! Gostaria de saber mais sobre o ERP para oficinas.";
 const WA_LINK = `https://wa.me/${WA_PHONE}?text=${WA_MESSAGE}`;
+const trackWhatsAppClick = (label: string) => {
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag("event", "whatsapp_click", {
+      event_category: "Conversion",
+      event_label: label,
+    });
+  }
+};
 
 function Container({ children }: { children: React.ReactNode }) {
   return <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>;
@@ -68,7 +76,7 @@ function StickyMobileCTA() {
           target="_blank"
           rel="noreferrer"
           className="btn-primary btn-transition inline-flex shrink-0 items-center justify-center gap-2 rounded-lg px-4 py-3 text-sm font-semibold"
-          onClick={() => handleWhatsAppClick("Sticky Mobile")}
+          onClick={() => trackWhatsAppClick("Sticky Mobile")}
         >
           <MessageCircle className="h-4 w-4" strokeWidth={2.25} />
           WhatsApp
@@ -167,7 +175,7 @@ function Nav() {
               variant="primary" 
               label="Falar com Especialista" 
               testId="button-nav-whatsapp" 
-              onClick={() => handleWhatsAppClick("Nav Desktop")}
+              onClick={() => trackWhatsAppClick("Nav Desktop")}
             />
           </div>
 
@@ -176,7 +184,7 @@ function Nav() {
                variant="primary" 
                label="Falar agora" 
                testId="button-nav-mobile-whatsapp" 
-               onClick={() => handleWhatsAppClick("Nav Mobile")}
+               onClick={() => trackWhatsAppClick("Nav Mobile")}
              />
           </div>
         </div>
@@ -231,7 +239,7 @@ function Hero() {
                   variant="primary" 
                   label="Falar com Especialista" 
                   testId="button-hero-whatsapp" 
-                  onClick={() => handleWhatsAppClick("Hero")}
+                  onClick={() => trackWhatsAppClick("Hero")}
                 />
               </div>
 
@@ -432,7 +440,7 @@ function VideoTestimonial() {
               variant="primary" 
               label="Quero resultados como esses" 
               testId="button-video-whatsapp" 
-              onClick={() => handleWhatsAppClick("Video Testimonial")}
+              onClick={() => trackWhatsAppClick("Video Testimonial")}
             />
           </div>
         </div>
@@ -622,7 +630,7 @@ function Support() {
                 variant="primary" 
                 label="Falar com Especialista" 
                 testId="button-support-whatsapp" 
-                onClick={() => handleWhatsAppClick("Support Section")}
+                onClick={() => trackWhatsAppClick("Support Section")}
               />
             </div>
           </div>
@@ -673,7 +681,7 @@ function Benefits() {
             variant="secondary" 
             label="Falar no WhatsApp" 
             testId="button-benefits-whatsapp" 
-            onClick={() => handleWhatsAppClick("Benefits")}
+            onClick={() => trackWhatsAppClick("Benefits")}
           />
         </div>
       </Container>
@@ -756,7 +764,7 @@ function Testimonials() {
             variant="primary" 
             label="Falar com Especialista" 
             testId="button-testimonials-whatsapp" 
-            onClick={() => handleWhatsAppClick("Testimonials")}
+            onClick={() => trackWhatsAppClick("Testimonials")}
           />
         </div>
       </Container>
@@ -835,7 +843,7 @@ function Footer() {
                   variant="primary" 
                   label="Chamar no WhatsApp" 
                   testId="button-footer-whatsapp-pro" 
-                  onClick={() => handleWhatsAppClick("Footer")}
+                  onClick={() => trackWhatsAppClick("Footer")}
                 />
               </div>
               <div className="mt-4 flex items-center gap-2 text-[11px] text-white/40 justify-center">
